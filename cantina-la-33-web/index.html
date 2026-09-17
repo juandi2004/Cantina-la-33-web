@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cantina la 33 — El mejor ambiente latino en Madrid</title>
+<meta name="description" content="Cantina la 33, en Usera (Madrid): vallenato, rancheras y aguardiente pa' beber y cantar. De miércoles a domingo de 22:00 a 6:00. Reservas por WhatsApp.">
+<meta name="theme-color" content="#140A17">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cantina la 33 — El mejor ambiente latino en Madrid">
+<meta property="og:description" content="Música pa' beber y cantar. De miércoles a domingo, de 22:00 a 6:00. Reserve su mesa por WhatsApp.">
+<meta property="og:image" content="img/logo.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23140A17'/><rect x='4' y='4' width='56' height='56' rx='11' fill='none' stroke='%23B84DFF' stroke-width='3'/><text x='32' y='44' font-family='Georgia,serif' font-weight='900' font-size='30' text-anchor='middle' fill='%23FBEFD5'>33</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Cantina la 33",
+  "slogan": "Música pa' beber y cantar",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Amor Hermoso, 33",
+    "addressLocality": "Madrid",
+    "addressRegion": "Usera",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34627676570",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "22:00",
+    "closes": "06:00"
+  }],
+  "sameAs": [
+    "https://www.tiktok.com/@cantinala33",
+    "https://www.instagram.com/cantinala33madrid/"
+  ],
+  "image": "img/logo.jpg"
+}
+</script>
+<style>
+  :root{
+    --night: #140A17;
+    --night-2: #1C1121;
+    --night-3: #28192F;
+    --violet: #B84DFF;
+    --magenta: #FF4FB8;
+    --amber: #F29A2E;
+    --amber-dim: #8E5716;
+    --cream: #FBEFD5;
+    --muted: #BFB0CC;
+    --line: rgba(251, 239, 213, 0.12);
+    --whatsapp: #25D366;
+    --whatsapp-hover: #1EBE5A;
+    --display: 'Caprasimo', Georgia, serif;
+    --body: 'Libre Franklin', system-ui, sans-serif;
+    --radius: 14px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; scroll-padding-top: 76px; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
+  body{
+    margin: 0;
+    background: var(--night);
+    color: var(--cream);
+    font-family: var(--body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, svg{ display: block; max-width: 100%; }
+  a{ color: inherit; text-decoration: none; }
+  :focus-visible{ outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  .wrap{ max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+  h1, h2, h3, h4{
+    font-family: var(--display);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.05;
+  }
+
+  /* ---------- Botones ---------- */
+  .btn{
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 24px;
+    border-radius: 100px;
+    font: 700 15px/1 var(--body);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform .15s ease, background .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn svg{ width: 20px; height: 20px; flex-shrink: 0; }
+  .btn-wa{ background: var(--whatsapp); color: #062B12; }
+  .btn-wa:hover{ background: var(--whatsapp-hover); }
+  .btn-ghost{ border-color: rgba(251,239,213,.28); color: var(--cream); }
+  .btn-ghost:hover{ border-color: var(--amber); color: var(--amber); }
+  .btn-sm{ padding: 10px 16px; font-size: 14px; }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(20, 10, 23, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav{ display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 68px; }
+  .brand{ font-family: var(--display); font-size: 24px; white-space: nowrap; }
+  .brand span{ color: var(--amber); }
+  .nav-links{ display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a{ color: var(--muted); font-size: 15px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover{ color: var(--cream); }
+
+  /* ---------- Hero ---------- */
+  .hero{ position: relative; padding: 80px 0 96px; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .hero-bg{ position: absolute; inset: 0; background: url('img/local.jpg') center / cover no-repeat; opacity: .22; }
+  .hero-bg::after{
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(20,10,23,.4) 0%, var(--night) 96%);
+  }
+  .hero .wrap{ position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .status{
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 7px 14px;
+    border: 1px solid var(--line);
+    background: rgba(20,10,23,.6);
+    border-radius: 100px;
+    font-size: 13px; font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .status .dot{ width: 8px; height: 8px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 10px var(--magenta); }
+  .status.closed .dot{ background: var(--muted); box-shadow: none; }
+  .hero h1{
+    font-size: clamp(52px, 8.5vw, 104px);
+    line-height: .98;
+    text-shadow: 3px 4px 0 rgba(242,154,46,.55), 0 0 30px rgba(184,77,255,.35);
+  }
+  .hero h1 em{ font-style: normal; color: var(--amber); display: block; text-shadow: 3px 4px 0 rgba(184,77,255,.45), 0 0 30px rgba(242,154,46,.3); }
+  .slogan{ margin-top: 16px; font-family: var(--display); font-size: 22px; color: var(--magenta); }
+  .tagline{ margin: 18px 0 32px; font-size: 18px; color: var(--muted); max-width: 44ch; }
+  .actions{ display: flex; flex-wrap: wrap; gap: 12px; }
+  .addr{ margin-top: 26px; display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; }
+  .addr svg{ width: 18px; height: 18px; color: var(--amber); flex-shrink: 0; }
+  .addr strong{ color: var(--cream); font-weight: 600; }
+
+  .logo-card{ position: relative; justify-self: end; width: min(460px, 100%); }
+  .logo-card::before{
+    content: ""; position: absolute; inset: -10%;
+    background: radial-gradient(circle, rgba(184,77,255,.35), transparent 62%);
+  }
+  .logo-card img{
+    position: relative;
+    width: 100%; height: auto; aspect-ratio: 1; object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(184,77,255,.45);
+    box-shadow: 0 30px 70px rgba(0,0,0,.55);
+  }
+
+  /* ---------- Secciones ---------- */
+  section{ padding: 96px 0; }
+  .alt{ background: var(--night-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .head{ max-width: 640px; margin-bottom: 48px; }
+  .kicker{
+    display: block;
+    color: var(--violet);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .head h2{ font-size: clamp(34px, 4.8vw, 54px); }
+  .head p{ margin: 16px 0 0; color: var(--muted); font-size: 17px; }
+
+  .photo{ margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+  .photo img{ width: 100%; height: 100%; object-fit: cover; }
+  .photo figcaption{
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 60px 24px 20px;
+    background: linear-gradient(0deg, rgba(20,10,23,.9), transparent);
+    font-family: var(--display); font-size: 22px;
+  }
+
+  /* ---------- Ambiente ---------- */
+  .genres{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  }
+  .genre{ padding: 30px 26px; }
+  .genre + .genre{ border-left: 1px solid var(--line); }
+  .genre .num{ font-family: var(--display); font-size: 16px; color: var(--magenta); }
+  .genre h3{ font-size: 26px; margin-top: 10px; }
+  .genre p{ margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+  .ambiente-photo{ margin-top: 24px; height: 420px; }
+  .ambiente-photo img{ object-position: center 45%; }
+
+  /* ---------- Barra ---------- */
+  .feature{ display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; margin-bottom: 64px; }
+  .feature .photo{ aspect-ratio: 4 / 3; }
+  .feature h2{ font-size: clamp(34px, 4.8vw, 50px); color: var(--amber); }
+  .feature p{ color: var(--muted); font-size: 17px; margin: 18px 0 26px; max-width: 46ch; }
+  .price-tag{
+    display: inline-flex; align-items: baseline; gap: 10px;
+    padding: 12px 20px;
+    border: 1px solid var(--amber-dim); border-radius: 100px;
+    font-size: 14px; color: var(--muted);
+  }
+  .price-tag strong{ font-family: var(--display); font-weight: 400; font-size: 24px; color: var(--cream); }
+
+  .menu{
+    display: grid; grid-template-columns: 280px 1fr; gap: 48px;
+    background: var(--night); border: 1px solid var(--line); border-radius: 18px;
+    padding: 28px;
+  }
+  .menu .photo{ min-height: 100%; }
+  .menu .photo img{ object-position: center top; }
+  .menu-body{ padding: 16px 12px 16px 0; }
+  .menu-head{ display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 32px; }
+  .menu-head h3{ font-size: clamp(30px, 4vw, 40px); }
+  .menu-head p{ margin: 0; color: var(--muted); font-size: 14px; }
+  .menu-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 48px; }
+  .menu-col h4{
+    margin: 0 0 10px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--amber-dim);
+    font-size: 21px; color: var(--amber);
+  }
+  .row{ display: flex; align-items: baseline; gap: 6px; padding: 5px 0; font-size: 15px; }
+  .row .name{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row .leader{ flex: 1; min-width: 12px; border-bottom: 1px dotted rgba(251,239,213,.2); transform: translateY(-4px); }
+  .row .price{ color: var(--amber); font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Galería ---------- */
+  .gallery{ display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 250px; grid-auto-flow: dense; gap: 14px; }
+  .gallery .photo img{ transition: transform .5s ease; }
+  .gallery .photo:hover img{ transform: scale(1.05); }
+  .gallery .tall{ grid-row: span 2; }
+  .gallery .wide{ grid-column: span 2; }
+
+  /* ---------- Reservas ---------- */
+  .reserve{
+    background:
+      radial-gradient(ellipse at 0% 100%, rgba(184,77,255,.16), transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(242,154,46,.10), transparent 50%),
+      var(--night);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  .reserve-photo{ border: none; border-radius: 0; height: 300px; }
+  .reserve-photo img{ object-position: center 40%; }
+  .reserve-photo figcaption{ font-size: clamp(24px, 3.4vw, 34px); padding: 80px 52px 28px; }
+  .reserve-photo figcaption span{ display: block; font-family: var(--body); font-size: 16px; color: var(--muted); margin-top: 6px; }
+  .reserve-body{ display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding: 48px 52px 52px; }
+  .reserve h2{ font-size: clamp(34px, 4.8vw, 50px); }
+  .reserve-intro{ color: var(--muted); font-size: 17px; margin: 16px 0 26px; }
+  .phone{ display: inline-block; font-family: var(--display); font-size: clamp(26px, 3vw, 32px); margin-bottom: 22px; transition: color .2s; }
+  .phone:hover{ color: var(--amber); }
+  .perks{ list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 10px; color: var(--muted); font-size: 15px; }
+  .perks li{ display: flex; gap: 10px; align-items: center; }
+  .perks li::before{ content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--magenta); flex-shrink: 0; }
+
+  form{ display: grid; gap: 16px; align-content: start; }
+  .field-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label{ display: grid; gap: 7px; font-size: 13px; font-weight: 600; color: var(--muted); }
+  input, select, textarea{
+    width: 100%;
+    background: var(--night-2);
+    color: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 13px 14px;
+    font: 400 15px var(--body);
+    color-scheme: dark;
+    transition: border-color .2s;
+  }
+  textarea{ resize: vertical; min-height: 84px; }
+  input:focus, select:focus, textarea:focus{ outline: none; border-color: var(--amber); }
+  form .btn{ width: 100%; margin-top: 4px; }
+  .form-note{ margin: 0; font-size: 13px; color: var(--muted); text-align: center; }
+
+  /* ---------- Ubicación ---------- */
+  .loc{ display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; }
+  .info{ display: grid; align-content: start; }
+  .info-line{ display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .info-line:first-child{ padding-top: 0; }
+  .info-line > svg{ width: 22px; height: 22px; color: var(--amber); flex-shrink: 0; margin-top: 2px; }
+  .info-line h4{ margin: 0 0 4px; font-family: var(--body); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .info-line p{ margin: 0; color: var(--muted); font-size: 16px; }
+  .info-line p a{ color: var(--cream); border-bottom: 1px solid var(--amber-dim); }
+  .info-line p a:hover{ color: var(--amber); }
+  .entrance{
+    display: flex; gap: 18px; align-items: center;
+    margin-top: 24px; padding: 12px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: var(--night-3);
+  }
+  .entrance img{ width: 88px; height: 120px; object-fit: cover; object-position: center 30%; border-radius: 8px; }
+  .entrance p{ margin: 0; font-size: 14px; color: var(--muted); }
+  .entrance strong{ display: block; color: var(--cream); font-size: 15px; margin-bottom: 4px; }
+  .map{ min-height: 440px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+  .map iframe{ width: 100%; height: 100%; min-height: 440px; border: 0; filter: invert(.9) hue-rotate(180deg) saturate(.6); }
+
+  /* ---------- Redes ---------- */
+  .socials{ display: flex; gap: 10px; }
+  .social{
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 14px;
+    border: 1px solid var(--line); border-radius: 100px;
+    font-size: 14px; font-weight: 600; color: var(--cream);
+    transition: border-color .2s, color .2s;
+  }
+  .social:hover{ border-color: var(--violet); color: var(--violet); }
+  .social svg{ width: 18px; height: 18px; }
+
+  /* ---------- Footer ---------- */
+  footer{ padding: 48px 0 110px; border-top: 1px solid var(--line); }
+  .footer-row{ display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-links{ display: flex; flex-wrap: wrap; gap: 22px; list-style: none; padding: 0; margin: 0; }
+  .footer-links a{ color: var(--muted); font-size: 14px; }
+  .footer-links a:hover{ color: var(--amber); }
+  .legal{ margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; color: var(--muted); font-size: 13px; }
+
+  /* ---------- WhatsApp flotante ---------- */
+  .fab{
+    position: fixed; right: 20px; bottom: 20px; z-index: 60;
+    width: 60px; height: 60px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--whatsapp); color: #fff;
+    box-shadow: 0 10px 28px rgba(0,0,0,.45);
+    transition: transform .15s ease;
+  }
+  .fab:hover{ transform: scale(1.08); }
+  .fab svg{ width: 32px; height: 32px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px){
+    .nav-links{ display: none; }
+    .hero{ padding: 40px 0 72px; }
+    .hero .wrap{ grid-template-columns: 1fr; gap: 36px; }
+    .logo-card{ order: -1; justify-self: center; width: min(420px, 100%); }
+    .genres{ grid-template-columns: 1fr 1fr; }
+    .genre + .genre{ border-left: none; }
+    .genre:nth-child(even){ border-left: 1px solid var(--line); }
+    .genre:nth-child(n+3){ border-top: 1px solid var(--line); }
+    .ambiente-photo{ height: 300px; }
+    .feature, .reserve-body, .loc{ grid-template-columns: 1fr; gap: 36px; }
+    .menu{ grid-template-columns: 1fr; gap: 8px; }
+    .menu .photo{ height: 240px; min-height: 0; }
+    .menu .photo img{ object-position: center 12%; }
+    .menu-body{ padding: 20px 4px 4px; }
+    .gallery{ grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
+    .map, .map iframe{ min-height: 320px; }
+  }
+  @media (max-width: 600px){
+    section{ padding: 72px 0; }
+    .wrap{ padding: 0 16px; }
+    .brand{ font-size: 21px; }
+    .actions .btn{ flex: 1 1 100%; }
+    .genres{ grid-template-columns: 1fr; }
+    .genre:nth-child(even){ border-left: none; }
+    .genre + .genre{ border-top: 1px solid var(--line); }
+    .ambiente-photo{ height: 240px; }
+    .photo figcaption{ font-size: 18px; padding: 48px 16px 14px; }
+    .menu{ padding: 16px; }
+    .menu-grid{ grid-template-columns: 1fr; gap: 30px; }
+    .gallery{ grid-auto-rows: 160px; gap: 10px; }
+    .reserve-photo{ height: auto; }
+    .reserve-photo img{ height: 210px; object-position: center 60%; }
+    .reserve-photo figcaption{ position: static; background: none; padding: 20px 20px 0; font-size: 22px; }
+    .reserve-body{ padding: 32px 20px; }
+    .field-row{ grid-template-columns: 1fr; }
+    .header-cta .txt{ display: none; }
+    .header-cta{ padding: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.01c0-5.2 4.23-9.43 9.43-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.44 9.42m8.03-17.45A11.27 11.27 0 0 0 12.04.72C5.78.72.69 5.8.69 12.06c0 2 .52 3.95 1.52 5.67L.6 23.28l5.68-1.49a11.33 11.33 0 0 0 5.75 1.47h.01c6.25 0 11.34-5.09 11.35-11.34 0-3.03-1.18-5.88-3.32-8.02"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.4"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="brand">Cantina la <span>33</span></a>
+    <ul class="nav-links">
+      <li><a href="#ambiente">Ambiente</a></li>
+      <li><a href="#barra">La barra</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#reservas">Reservas</a></li>
+      <li><a href="#ubicacion">Cómo llegar</a></li>
+    </ul>
+    <a href="#reservas" class="btn btn-wa btn-sm header-cta" aria-label="Reservar mesa"><svg><use href="#i-wa"/></svg><span class="txt">Reservar</span></a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div>
+        <div class="status"><span class="dot"></span><span id="status-text">Miércoles a domingo · 22:00 a 6:00</span></div>
+        <h1>Cantina<em>la 33</em></h1>
+        <p class="slogan">Música pa' beber y cantar</p>
+        <p class="tagline">El mejor ambiente latino en Madrid. Vallenato, rancheras y guaro bien frío pa' gozársela con el parche hasta que salga el sol.</p>
+        <div class="actions">
+          <a href="#" class="btn btn-wa js-wa"><svg><use href="#i-wa"/></svg>Reservar por WhatsApp</a>
+          <a href="#" class="btn btn-ghost js-tel"><svg><use href="#i-phone"/></svg>Llamar</a>
+        </div>
+        <div class="addr"><svg><use href="#i-pin"/></svg><span><strong>Calle Amor Hermoso, 33</strong> · Usera, Madrid</span></div>
+      </div>
+      <div class="logo-card">
+        <img src="img/logo.jpg" alt="Logo de Cantina la 33: letrero de neón con acordeón y el lema música pa' beber" width="900" height="900">
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBIENTE -->
+  <section id="ambiente">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">El ambiente</span>
+        <h2>Aquí se viene a cantar</h2>
+        <p>Suena de la que se canta a todo pulmón. Llegue con el parche, pida el guaro y deje que la noche haga lo suyo.</p>
+      </div>
+      <div class="genres">
+        <div class="genre">
+          <div class="num">01</div>
+          <h3>Vallenato</h3>
+          <p>Del bueno, del de parranda. Pa' cantar abrazados y brindar por los que no vinieron.</p>
+        </div>
+        <div class="genre">
+          <div class="num">02</div>
+          <h3>Ranchera</h3>
+          <p>Pa' despecharse con ganas. Aquí nadie le juzga el grito a la tercera copa.</p>
+        </div>
+        <div class="genre">
+          <div class="num">03</div>
+          <h3>Corridos</h3>
+          <p>Historias de las que se cantan con el pecho. ¡Súbale, que esa sí es buena!</p>
+        </div>
+        <div class="genre">
+          <div class="num">04</div>
+          <h3>Baladas</h3>
+          <p>Las de dedicar. Pa' bajarle un cambio antes de la siguiente tanda.</p>
+        </div>
+      </div>
+      <figure class="photo ambiente-photo">
+        <img src="img/salon.jpg" alt="Salón de Cantina la 33 lleno de gente, con banderas y luces de neón" loading="lazy">
+        <figcaption>Así se prende un fin de semana en La 33</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- BARRA -->
+  <section id="barra" class="alt">
+    <div class="wrap">
+      <div class="feature">
+        <figure class="photo">
+          <img src="img/aguardiente.jpg" alt="Botellas de Aguardiente Antioqueño tapa roja, azul y verde, y Aguardiente Amarillo de Manzanares" loading="lazy">
+        </figure>
+        <div>
+          <span class="kicker">La barra</span>
+          <h2>Aquí el guaro manda</h2>
+          <p>Antioqueño de tapa roja, azul y verde, y Amarillo de Manzanares. Botella en la mesa, copitas servidas y ¡salud! Y si lo suyo es el whisky, el ron o el tequila, también hay pa' todos los gustos.</p>
+          <div class="price-tag">Botella de aguardiente <strong>60€</strong></div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <figure class="photo">
+          <img src="img/estante.jpg" alt="Estante con sombrero vueltiao, Buchanan's, Johnnie Walker y otras botellas" loading="lazy">
+        </figure>
+        <div class="menu-body">
+          <div class="menu-head">
+            <h3>La carta</h3>
+            <p>Precios por botella</p>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-col">
+              <h4>Aguardiente</h4>
+              <div class="row"><span class="name">Aguardiente</span><span class="leader"></span><span class="price">60€</span></div>
+            </div>
+            <div class="menu-col">
+              <h4>Vodka y chupitos</h4>
+              <div class="row"><span class="name">Absolut Vodka</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Canelita</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Jägermeister</span><span class="leader"></span><span class="price">60€</span></div>
+            </div>
+            <div class="menu-col">
+              <h4>Ron</h4>
+              <div class="row"><span class="name">Barceló</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Brugal</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Cacique</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Caldas 3 años</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Legendario</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Caldas 5 años</span><span class="leader"></span><span class="price">80€</span></div>
+              <div class="row"><span class="name">Medellín 3 años</span><span class="leader"></span><span class="price">80€</span></div>
+              <div class="row"><span class="name">Caldas 8 años</span><span class="leader"></span><span class="price">100€</span></div>
+              <div class="row"><span class="name">Havana Club 7 años</span><span class="leader"></span><span class="price">100€</span></div>
+              <div class="row"><span class="name">Medellín 8 años</span><span class="leader"></span><span class="price">100€</span></div>
+            </div>
+            <div class="menu-col">
+              <h4>Whisky</h4>
+              <div class="row"><span class="name">Ballantine's</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Cutty Sark</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Dewar's White Label</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">J&amp;B</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Red Label</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Black Label</span><span class="leader"></span><span class="price">100€</span></div>
+              <div class="row"><span class="name">Chivas Regal</span><span class="leader"></span><span class="price">100€</span></div>
+              <div class="row"><span class="name">Jack Daniel's</span><span class="leader"></span><span class="price">100€</span></div>
+              <div class="row"><span class="name">Buchanan's</span><span class="leader"></span><span class="price">120€</span></div>
+              <div class="row"><span class="name">Cardhu</span><span class="leader"></span><span class="price">120€</span></div>
+              <div class="row"><span class="name">Double Black</span><span class="leader"></span><span class="price">120€</span></div>
+              <div class="row"><span class="name">Old Parr</span><span class="leader"></span><span class="price">120€</span></div>
+            </div>
+            <div class="menu-col">
+              <h4>Ginebra</h4>
+              <div class="row"><span class="name">Beefeater</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Larios</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Puerto de Indias</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Seagram's</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">Bombay Sapphire</span><span class="leader"></span><span class="price">90€</span></div>
+              <div class="row"><span class="name">The London Nº1</span><span class="leader"></span><span class="price">90€</span></div>
+              <div class="row"><span class="name">Hendrick's</span><span class="leader"></span><span class="price">120€</span></div>
+            </div>
+            <div class="menu-col">
+              <h4>Tequila</h4>
+              <div class="row"><span class="name">José Cuervo</span><span class="leader"></span><span class="price">60€</span></div>
+              <div class="row"><span class="name">1800 Reposado</span><span class="leader"></span><span class="price">110€</span></div>
+              <div class="row"><span class="name">Don Julio Reposado</span><span class="leader"></span><span class="price">150€</span></div>
+              <div class="row"><span class="name">El Patrón</span><span class="leader"></span><span class="price">150€</span></div>
+              <div class="row"><span class="name">Don Julio 70 Blanco</span><span class="leader"></span><span class="price">200€</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Galería</span>
+        <h2>La 33 por dentro</h2>
+        <p>Así se vive la rumba en La 33, sin filtro.</p>
+      </div>
+      <div class="gallery">
+        <figure class="photo tall"><img src="img/barra.jpg" alt="Barra de madera con luz morada, copas colgadas y botellas" loading="lazy"></figure>
+        <figure class="photo wide"><img src="img/local.jpg" alt="Local de Cantina la 33 con luces rojas, barra y taburetes" loading="lazy"></figure>
+        <figure class="photo tall"><img src="img/whisky.jpg" alt="Botella de Johnnie Walker Green Label con hielo y naranja en la barra" loading="lazy"></figure>
+        <figure class="photo wide"><img src="img/neon.jpg" style="object-position: 70% 0" alt="Letrero de neón rosa de Cantina la 33" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVAS -->
+  <section id="reservas" class="alt">
+    <div class="wrap">
+      <div class="reserve">
+        <figure class="photo reserve-photo">
+          <img src="img/cumple.jpg" alt="Grupo de amigos celebrando un cumpleaños en Cantina la 33" loading="lazy">
+          <figcaption>¿Cumpleaños a la vista?<span>Traiga el parche, que la rumba la ponemos nosotros.</span></figcaption>
+        </figure>
+        <div class="reserve-body">
+          <div>
+            <span class="kicker">Reservas</span>
+            <h2>Separe su mesa</h2>
+            <p class="reserve-intro">¿Cumpleaños, despedida o simplemente ganas de rumba? Escríbanos por WhatsApp o llámenos y le guardamos la mesa pa' usted y su parche.</p>
+            <a href="#" class="phone js-tel js-phone-text">+34 627 676 570</a>
+            <div class="actions">
+              <a href="#" class="btn btn-wa js-wa"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+              <a href="#" class="btn btn-ghost js-tel"><svg><use href="#i-phone"/></svg>Llamar</a>
+            </div>
+            <ul class="perks">
+              <li>Cumpleaños, despedidas y celebraciones</li>
+              <li>Mesas pa' grupos grandes</li>
+              <li>Botella servida en la mesa</li>
+            </ul>
+          </div>
+
+          <form id="reserva-form">
+            <label>Nombre
+              <input type="text" name="nombre" placeholder="¿A nombre de quién?" autocomplete="given-name" required>
+            </label>
+            <div class="field-row">
+              <label>Fecha
+                <input type="date" name="fecha" required>
+              </label>
+              <label>Personas
+                <select name="personas">
+                  <option>2</option>
+                  <option>3 a 5</option>
+                  <option>6 a 10</option>
+                  <option>Más de 10</option>
+                </select>
+              </label>
+            </div>
+            <label>Comentarios (opcional)
+              <textarea name="comentario" placeholder="Cumpleaños, hora aproximada de llegada, botella…"></textarea>
+            </label>
+            <button type="submit" class="btn btn-wa"><svg><use href="#i-wa"/></svg>Enviar reserva por WhatsApp</button>
+            <p class="form-note">Abrimos de miércoles a domingo. Se abre WhatsApp con su mensaje listo pa' enviar.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Cómo llegar</span>
+        <h2>Lo esperamos en Usera</h2>
+      </div>
+      <div class="loc">
+        <div class="info">
+          <div class="info-line">
+            <svg><use href="#i-pin"/></svg>
+            <div>
+              <h4>Dirección</h4>
+              <p>Calle Amor Hermoso, 33 · Usera, Madrid<br>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Cantina+la+33+Calle+Amor+Hermoso+33+Madrid" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+            </div>
+          </div>
+          <div class="info-line">
+            <svg><use href="#i-clock"/></svg>
+            <div>
+              <h4>Horario</h4>
+              <p>De miércoles a domingo, de 22:00 a 6:00<br>Lunes y martes cerrado</p>
+            </div>
+          </div>
+          <div class="info-line">
+            <svg><use href="#i-phone"/></svg>
+            <div>
+              <h4>Reservas</h4>
+              <p><a href="#" class="js-wa">WhatsApp</a> o <a href="#" class="js-tel js-phone-text">+34 627 676 570</a></p>
+            </div>
+          </div>
+          <div class="info-line">
+            <svg><use href="#i-heart"/></svg>
+            <div>
+              <h4>Síganos</h4>
+              <div class="socials" style="margin-top:8px">
+                <a class="social" href="https://www.tiktok.com/@cantinala33" target="_blank" rel="noopener"><svg><use href="#i-tiktok"/></svg>TikTok</a>
+                <a class="social" href="https://www.instagram.com/cantinala33madrid/" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg>Instagram</a>
+              </div>
+            </div>
+          </div>
+          <div class="entrance">
+            <img src="img/fachada.jpg" alt="Fachada de Cantina la 33 con su letrero y mural del sombrero vueltiao" loading="lazy">
+            <p><strong>Así nos reconoce</strong>Busque el letrero de fuego y el mural del sombrero vueltiao con el acordeón.</p>
+          </div>
+        </div>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps?q=Calle+Amor+Hermoso+33,+Usera,+Madrid&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa de ubicación de Cantina la 33"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <a href="#top" class="brand">Cantina la <span>33</span></a>
+      <ul class="footer-links">
+        <li><a href="#ambiente">Ambiente</a></li>
+        <li><a href="#barra">La barra</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#ubicacion">Cómo llegar</a></li>
+      </ul>
+      <div class="socials">
+        <a class="social" href="https://www.tiktok.com/@cantinala33" target="_blank" rel="noopener" aria-label="TikTok de Cantina la 33"><svg><use href="#i-tiktok"/></svg></a>
+        <a class="social" href="https://www.instagram.com/cantinala33madrid/" target="_blank" rel="noopener" aria-label="Instagram de Cantina la 33"><svg><use href="#i-instagram"/></svg></a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> Cantina la 33 · Calle Amor Hermoso, 33 · Madrid</span>
+      <span>Prohibida la venta de alcohol a menores de 18 años. Beba con moderación.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="fab js-wa" aria-label="Reservar por WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+  // ===== CONFIGURACIÓN: número con prefijo de país, sin espacios ni "+" =====
+  const PHONE = "34627676570";
+  const DEFAULT_MSG = "¡Hola! Quiero reservar una mesa en Cantina la 33.";
+
+  const waLink = (msg) => `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+  const pretty = PHONE.replace(/^34(\d{3})(\d{3})(\d{3})$/, "+34 $1 $2 $3");
+
+  document.querySelectorAll(".js-wa").forEach(a => {
+    a.href = waLink(DEFAULT_MSG);
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+  document.querySelectorAll(".js-tel").forEach(a => a.href = `tel:+${PHONE}`);
+  document.querySelectorAll(".js-phone-text").forEach(el => el.textContent = pretty);
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Estado abierto/cerrado según la hora de Madrid (miércoles a domingo, 22:00 a 6:00)
+  (() => {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Europe/Madrid", weekday: "short", hour: "numeric", hourCycle: "h23"
+    }).formatToParts(new Date()).map(p => [p.type, p.value]));
+    const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(parts.weekday);
+    const hour = Number(parts.hour);
+    const nightDays = [3, 4, 5, 6, 0];        // noches que abrimos: mié a dom
+    const morningDays = [4, 5, 6, 0, 1];      // madrugadas: jue a lun
+    const open = (hour >= 22 && nightDays.includes(day)) || (hour < 6 && morningDays.includes(day));
+    const el = document.getElementById("status-text");
+    if (open) {
+      el.textContent = "Abierto ahora · hasta las 6:00";
+    } else if (nightDays.includes(day)) {
+      el.textContent = "Hoy abrimos a las 22:00";
+    } else {
+      el.textContent = "Lunes y martes cerrado · volvemos el miércoles";
+      el.parentElement.classList.add("closed");
+    }
+  })();
+
+  // No permitir fechas pasadas
+  const fecha = document.querySelector('input[name="fecha"]');
+  const hoy = new Date();
+  hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
+  fecha.min = hoy.toISOString().slice(0, 10);
+
+  // Formulario -> mensaje de WhatsApp prellenado
+  document.getElementById("reserva-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const d = new FormData(e.target);
+    const [y, m, day] = d.get("fecha").split("-");
+    let msg = "¡Hola! Quiero reservar una mesa en Cantina la 33.\n\n" +
+              `Nombre: ${d.get("nombre").trim()}\n` +
+              `Fecha: ${day}/${m}/${y}\n` +
+              `Personas: ${d.get("personas")}`;
+    const nota = d.get("comentario").trim();
+    if (nota) msg += `\nComentarios: ${nota}`;
+    window.open(waLink(msg), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
